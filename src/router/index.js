@@ -1,15 +1,12 @@
-
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import welcome from '@/welcome'
+import Router from 'vue-router'
+import index from '@/components/index'
 
-Vue.use(VueRouter)
+Vue.use(Router)
 
-var router = new VueRouter({
-	mode: 'history',
-	routes: [
-		{ path: '/', name: 'welcome', component: welcome },
-		{ path: '*', redirect: '/' }
-	]
+export default new Router({
+  routes: [
+    {path: '/', name: 'index', component: index},
+    {path: '*', redirect: '/'}
+  ]
 })
-export default router
